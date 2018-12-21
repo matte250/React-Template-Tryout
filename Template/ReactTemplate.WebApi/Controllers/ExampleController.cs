@@ -15,9 +15,9 @@ namespace ReactTemplate.WebApi.Controllers
     {
         private readonly IExampleServices _services;
 
-        public ExampleController()
+        public ExampleController(IExampleServices services)
         {
-            _services = new ExampleServices();
+            _services = services;
         }
         [HttpPost]
         [Route("AddExampleItem")]

@@ -17,7 +17,6 @@ namespace ReactTemplate.WebApi.Services
         public ExampleModel AddExampleModelItem(ExampleModel item)
         {
             _exampleModelItems.Add(item.ItemName, item);
-
             return item;
         }
 
