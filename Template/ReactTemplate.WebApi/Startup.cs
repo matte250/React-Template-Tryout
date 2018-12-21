@@ -34,14 +34,20 @@ namespace ReactTemplate.WebApi
                 app.UseHsts();
             }
 
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
             app.UseHttpsRedirection();
             app.UseMvc();
+            
             /*
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("u mum gay");
+                //await context.Response.WriteAsync("u mum gay");
+                var url = new Uri(@"wwwroot/default.html");
+                await context.Response.SendFileAsync(url.AbsolutePath);
             });
             */
+
         }
     }
 }
