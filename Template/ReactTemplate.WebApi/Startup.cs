@@ -37,7 +37,7 @@ namespace ReactTemplate.WebApi
             app.UseDefaultFiles();
             app.UseStaticFiles();
             app.UseHttpsRedirection();
-            app.UseMvc();
+            app.UseMvc();   
             
             /*
             app.Run(async (context) =>
